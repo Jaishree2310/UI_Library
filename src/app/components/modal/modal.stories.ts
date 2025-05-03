@@ -4,6 +4,7 @@ import { ModalComponent } from './modal.component';
 export default {
   title: 'Components/Modal',
   component: ModalComponent,
+  tags: ['autodocs'],
 } as Meta<ModalComponent>;
 
 const Template: StoryFn<ModalComponent> = (args: ModalComponent) => ({

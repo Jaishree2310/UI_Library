@@ -6,6 +6,7 @@ import { CardComponent } from './card.component';
 export default {
   title: 'Components/Card',
   component: CardComponent,
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn<CardComponent> = (args: CardComponent) => ({

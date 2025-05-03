@@ -4,6 +4,7 @@ import { InputComponent } from './input.component';
 export default {
   title: 'Components/Input',
   component: InputComponent,
+  tags: ['autodocs'],
 } as Meta<InputComponent>;
 
 const Template: StoryFn<InputComponent> = (args: InputComponent) => ({
