@@ -3,8 +3,6 @@
 
 A scalable, maintainable, and visually documented UI library built using **Angular**, styled with **SCSS**, and powered by **Storybook** for isolated component development, preview, and testing.
 
----
-
 ##  Project Goals
 
 - Initialize Storybook in Angular project
@@ -14,9 +12,7 @@ A scalable, maintainable, and visually documented UI library built using **Angul
 - Set up Chromatic for visual regression testing (optional)
 - Add comprehensive documentation and contributor guidelines
 
----
 
-```
 ## 📁 Folder Structure
 src/
 ├── app/
@@ -37,8 +33,6 @@ src/
 .storybook/
 │   ├── main.ts
 │   └── preview\.ts
-
-````
 
 ---
 
