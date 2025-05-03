@@ -12,6 +12,7 @@ A scalable, maintainable, and visually documented UI library built using **Angul
 - Set up Chromatic for visual regression testing (optional)
 - Add comprehensive documentation and contributor guidelines
 
+---
 
 ## 📁 Folder Structure
 src/
