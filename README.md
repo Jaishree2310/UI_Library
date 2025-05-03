@@ -16,10 +16,8 @@ A scalable, maintainable, and visually documented UI library built using **Angul
 
 ---
 
-## 📁 Folder Structure
-
 ```
-
+## 📁 Folder Structure
 src/
 ├── app/
 │   └── components/
