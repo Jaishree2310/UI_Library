@@ -89,7 +89,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-d7bf0323e6da130e2609e2af0117b4a8d7cd874132206af50bf43dfc37044485fe50f2867ea76525730dd195b9b95a43802a12dadc6ad5cd7bf2faa07f19f0da",
+            "id": "component-ButtonComponent-5747b2121bdc472b32e41e4e47db44dbd7601fe73e9c7b3d0f82e7d1aaf97be0d13d4880fee19b0e4d511178aa52a24a5a9ea3ee0034d204ffd659c0aae43e41",
             "file": "src/stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -123,16 +123,16 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 760,
-                            "end": 773,
+                            "pos": 793,
+                            "end": 807,
                             "kind": 327,
                             "id": 0,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "tagName": {
-                                "pos": 761,
-                                "end": 769,
+                                "pos": 794,
+                                "end": 802,
                                 "kind": 80,
                                 "id": 0,
                                 "flags": 16842752,
@@ -199,11 +199,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule],\n  template: ` <button\n  type=\"button\"\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  {{ label }}\n</button>`,\n  styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /** Is this the principal call to action on the page? */\n  @Input()\n  primary = false;\n\n  /** What background color to use */\n  @Input()\n  backgroundColor?: string;\n\n  /** How large should the button be? */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /** Optional click handler */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  template: ` <button\r\n  type=\"button\"\r\n  (click)=\"onClick.emit($event)\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n>\r\n  {{ label }}\r\n</button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport class ButtonComponent {\r\n  /** Is this the principal call to action on the page? */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /** What background color to use */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /** How large should the button be? */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /** Optional click handler */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\n  display: inline-block;\n  cursor: pointer;\n  border: 0;\n  border-radius: 3em;\n  font-weight: 700;\n  line-height: 1;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n.storybook-button--primary {\n  background-color: #555ab9;\n  color: white;\n}\n.storybook-button--secondary {\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n  background-color: transparent;\n  color: #333;\n}\n.storybook-button--small {\n  padding: 10px 16px;\n  font-size: 12px;\n}\n.storybook-button--medium {\n  padding: 11px 20px;\n  font-size: 14px;\n}\n.storybook-button--large {\n  padding: 12px 24px;\n  font-size: 16px;\n}\n",
+                    "data": ".storybook-button {\r\n  display: inline-block;\r\n  cursor: pointer;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  font-weight: 700;\r\n  line-height: 1;\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n}\r\n.storybook-button--primary {\r\n  background-color: #555ab9;\r\n  color: white;\r\n}\r\n.storybook-button--secondary {\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n  background-color: transparent;\r\n  color: #333;\r\n}\r\n.storybook-button--small {\r\n  padding: 10px 16px;\r\n  font-size: 12px;\r\n}\r\n.storybook-button--medium {\r\n  padding: 11px 20px;\r\n  font-size: 14px;\r\n}\r\n.storybook-button--large {\r\n  padding: 12px 24px;\r\n  font-size: 16px;\r\n}\r\n",
                     "styleUrl": "./button.css"
                 }
             ],
@@ -223,14 +223,14 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-c13980b6e26d1e08c1569f9221b4ad0354517ff3e4dd24ed73b2de79108229d7a215782055d7238a71600828e038ff9eef9a59742be021c76f7df3f7f91a0b3a-1",
+            "id": "component-ButtonComponent-7adf1030fe57e44895206c5d2c116ce27b812ccfa8e89636f664c2805050575c2848a61c2788e44191e0a606e55efab3fb7568c6435564e98eb87b439fa1f08f-1",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-button",
+            "selector": "storybook-button",
             "styleUrls": [
                 "./button.component.scss"
             ],
@@ -242,7 +242,34 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
+                    "name": "backgroundColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
                     "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -251,23 +278,25 @@
                     "decorators": []
                 },
                 {
-                    "name": "label",
+                    "name": "size",
+                    "defaultValue": "'medium'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "variant",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "string",
+                    "line": 15,
+                    "type": "\"small\" | \"medium\" | \"large\"",
                     "decorators": []
                 }
             ],
-            "outputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
@@ -284,24 +313,35 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss']\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label!: string;\r\n  @Input() variant!: string;\r\n  @Input() disabled = false;\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label = 'Button';\r\n  @Input() backgroundColor = '';\r\n  @Input() primary = false;\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n  @Input() disabled = false;\r\n\r\n  @Output() onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\r\n    padding: 10px 20px;\r\n    font-weight: bold;\r\n    border-radius: 6px;\r\n    border: none;\r\n    cursor: pointer;\r\n    transition: all 0.2s ease-in-out;\r\n  }\r\n  \r\n  .primary {\r\n    background-color: #1976d2;\r\n    color: white;\r\n  }\r\n  \r\n  .secondary {\r\n    background-color: #e0e0e0;\r\n    color: #333;\r\n  }\r\n  \r\n  button:disabled {\r\n    opacity: 0.6;\r\n    cursor: not-allowed;\r\n  }\r\n  ",
+                    "data": ".storybook-button {\r\n  font-family: 'Arial', sans-serif;\r\n  border: none;\r\n  border-radius: 4px;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  padding: 0.5rem 1rem;\r\n  font-size: 14px;\r\n  transition: background-color 0.3s ease;\r\n\r\n  &--primary {\r\n    color: white;\r\n    background-color: #1ea7fd;\r\n  }\r\n\r\n  &--secondary {\r\n    color: #333;\r\n    background-color: #e0e0e0;\r\n  }\r\n\r\n  &--small {\r\n    font-size: 12px;\r\n    padding: 0.25rem 0.5rem;\r\n  }\r\n\r\n  &--medium {\r\n    font-size: 14px;\r\n    padding: 0.5rem 1rem;\r\n  }\r\n\r\n  &--large {\r\n    font-size: 16px;\r\n    padding: 0.75rem 1.25rem;\r\n  }\r\n\r\n  &:disabled {\r\n    cursor: not-allowed;\r\n    opacity: 0.6;\r\n  }\r\n}\r\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 20
+                    }
+                }
+            },
             "isDuplicate": true,
             "duplicateId": 1,
             "duplicateName": "ButtonComponent-1",
-            "templateData": "<button [ngClass]=\"variant\" [disabled]=\"disabled\">\r\n    {{ label }}\r\n</button>\r\n\r\n"
+            "templateData": "<button\r\n  type=\"button\"\r\n  [ngClass]=\"classes\"\r\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  [disabled]=\"disabled\"\r\n  (click)=\"onClick.emit($event)\"\r\n>\r\n  {{ label }}\r\n</button>\r\n"
         },
         {
             "name": "CardComponent",
-            "id": "component-CardComponent-452cdfcd4f9cd91574fc2628c6c991172c9c0e0347d1eabc0136b547e1e6d46ad614843302982b392b00384cd0f587c6624a95ad227edb609e8fe7a71a72c157",
+            "id": "component-CardComponent-e68c627df0321d71693c076fe79cb524f02f94493cc186e52b7c345866528654053eb8de3c424ac1f764f075c00d7f58dee5a66890f545e8b9da250ceb58d499",
             "file": "src/app/components/card/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -320,11 +360,28 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
+                    "name": "clickable",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
                     "name": "content",
                     "defaultValue": "'Card content goes here.'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "imageUrl",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
                     "type": "string",
                     "decorators": []
                 },
@@ -333,34 +390,59 @@
                     "defaultValue": "'Card Title'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 }
             ],
-            "outputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "cardClick",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "onCardClick",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
-            "standalone": false,
-            "imports": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-card',\r\n  templateUrl: './card.component.html',\r\n  styleUrls: ['./card.component.scss']\r\n})\r\nexport class CardComponent {\r\n  @Input() title: string = 'Card Title';\r\n  @Input() content: string = 'Card content goes here.';\r\n}\r\n\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common'; \r\n\r\n@Component({\r\n  selector: 'app-card',\r\n  standalone: true, \r\n  imports: [CommonModule], \r\n  templateUrl: './card.component.html',\r\n  styleUrls: ['./card.component.scss']\r\n})\r\nexport class CardComponent {\r\n  @Input() title: string = 'Card Title';\r\n  @Input() content: string = 'Card content goes here.';\r\n  @Input() imageUrl?: string;\r\n  @Input() clickable: boolean = false;\r\n\r\n  @Output() cardClick = new EventEmitter<void>();\r\n\r\n  onCardClick() {\r\n    if (this.clickable) {\r\n      this.cardClick.emit();\r\n    }\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".card {\r\n    padding: 20px;\r\n    background: #ffffff;\r\n    border-radius: 10px;\r\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\r\n    max-width: 300px;\r\n  }\r\n  ",
+                    "data": ".card {\r\n  padding: 1rem;\r\n  border: 1px solid #ccc;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);\r\n  max-width: 300px;\r\n  cursor: default;\r\n  transition: box-shadow 0.3s ease;\r\n\r\n  &.clickable {\r\n    cursor: pointer;\r\n    &:hover {\r\n      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);\r\n    }\r\n  }\r\n\r\n  .card-image {\r\n    width: 100%;\r\n    border-radius: 8px;\r\n    margin-bottom: 1rem;\r\n  }\r\n\r\n  .card-title {\r\n    font-size: 1.2rem;\r\n    margin-bottom: 0.5rem;\r\n  }\r\n\r\n  .card-content {\r\n    font-size: 0.95rem;\r\n  }\r\n}\r\n",
                     "styleUrl": "./card.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<!-- <p>card works!</p> -->\r\n<div class=\"card\">\r\n    <h3>{{ title }}</h3>\r\n    <p>{{ content }}</p>\r\n  </div>\r\n  "
+            "templateData": "<div class=\"card\" [class.clickable]=\"clickable\" (click)=\"onCardClick()\">\r\n  <img *ngIf=\"imageUrl\" [src]=\"imageUrl\" alt=\"Card image\" class=\"card-image\" />\r\n  <h3 class=\"card-title\">{{ title }}</h3>\r\n  <p class=\"card-content\">{{ content }}</p>\r\n</div>\r\n"
         },
         {
             "name": "HeaderComponent",
@@ -1004,7 +1086,7 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -1013,7 +1095,7 @@
                 "linktype": "component",
                 "name": "CardComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
