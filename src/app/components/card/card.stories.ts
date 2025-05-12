@@ -1,20 +1,36 @@
-// import { Meta, Story } from '@storybook/angular';
-import { Meta, StoryFn } from '@storybook/angular';
-
 import { CardComponent } from './card.component';
+import { Meta, StoryObj } from '@storybook/angular';
 
-export default {
-  title: 'Components/Card',
+const meta: Meta<CardComponent> = {
+  title: 'MyComponents/Card',
   component: CardComponent,
   tags: ['autodocs'],
-} as Meta;
+};
 
-const Template: StoryFn<CardComponent> = (args: CardComponent) => ({
-  props: args,
-});
+export default meta;
 
-export const Default = Template.bind({});
-Default.args = {
-  title: 'Storybook Card',
-  content: 'This is a simple card layout used for showcasing Storybook component.',
+type Story = StoryObj<CardComponent>;
+
+export const Default: Story = {
+  args: {
+    title: 'Default Card',
+    content: 'This is a basic card without an image or click action.',
+  },
+};
+
+export const WithImage: Story = {
+  args: {
+    title: 'Card With Image',
+    content: 'This card includes an image at the top.',
+    imageUrl: 'https://picsum.photos/id/237/300/200',
+  },
+};
+
+export const Clickable: Story = {
+  args: {
+    title: 'Clickable Card',
+    content: 'Clicking this card will trigger an event.',
+    imageUrl: 'https://picsum.photos/id/237/300/200',
+    clickable: true,
+  },
 };
