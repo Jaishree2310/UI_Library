@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/angular';
 import { HeaderComponent } from './header.component';
 
 export default {
-  title: 'Components/Header',
+  title: 'MyComponents/Header',
   component: HeaderComponent,
   tags: ['autodocs'],
 } as Meta<HeaderComponent>;

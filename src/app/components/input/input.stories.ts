@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/angular';
 import { InputComponent } from './input.component';
 
 export default {
-  title: 'Components/Input',
+  title: 'MyComponents/Input',
   component: InputComponent,
   tags: ['autodocs'],
 } as Meta<InputComponent>;

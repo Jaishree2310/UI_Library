@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/angular';
 import { ModalComponent } from './modal.component';
 
 export default {
-  title: 'Components/Modal',
+  title: 'MyComponents/Modal',
   component: ModalComponent,
   tags: ['autodocs'],
 } as Meta<ModalComponent>;
