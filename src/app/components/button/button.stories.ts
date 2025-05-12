@@ -1,36 +1,60 @@
-import { Meta, StoryFn } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
 
-export default {
-  title: 'Components/Button',
+const meta: Meta<ButtonComponent> = {
+  title: 'MyComponents/Button',
   component: ButtonComponent,
-  tags: ['autodocs'], 
+  tags: ['autodocs'],
   argTypes: {
-    variant: {
-      control: 'select',
-      options: ['primary', 'secondary'],
-    },
+    backgroundColor: { control: 'color' },
+    size: { control: 'radio', options: ['small', 'medium', 'large'] },
+    primary: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    onClick: { action: 'clicked' },
   },
-} as Meta;
-
-const Template: StoryFn<ButtonComponent> = (args: ButtonComponent) => ({
-  props: args,
-});
-
-export const Primary = Template.bind({});
-Primary.args = {
-  label: 'Primary Button',
-  variant: 'primary',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Secondary Button',
-  variant: 'secondary',
+export default meta;
+type Story = StoryObj<ButtonComponent>;
+
+export const Primary: Story = {
+  args: {
+    primary: true,
+    label: 'Primary Button',
+  },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  label: 'Disabled',
-  disabled: true,
+export const Secondary: Story = {
+  args: {
+    primary: false,
+    label: 'Secondary Button',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    label: 'Disabled Button',
+    disabled: true,
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+    label: 'Large Button',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: 'small',
+    label: 'Small Button',
+  },
+};
+
+export const CustomColor: Story = {
+  args: {
+    label: 'Custom Color',
+    backgroundColor: '#FF69B4',
+  },
 };

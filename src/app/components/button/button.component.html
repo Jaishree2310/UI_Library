@@ -1,4 +1,9 @@
-<button [ngClass]="variant" [disabled]="disabled">
-    {{ label }}
+<button
+  type="button"
+  [ngClass]="classes"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  [disabled]="disabled"
+  (click)="onClick.emit($event)"
+>
+  {{ label }}
 </button>
-
