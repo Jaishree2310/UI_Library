@@ -83,7 +83,7 @@ npx chromatic --project-token=<your-token>
 2. Configure in CI/CD if needed.
 
 3. Run command 
-```` npm run chromatic ```
+``` npm run chromatic ```
 ---
 
 ## Tech Stack
