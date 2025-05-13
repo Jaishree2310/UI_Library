@@ -8,7 +8,9 @@ const config: StorybookConfig = {
   "addons": [
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "@chromatic-com/storybook",
+    "@storybook/addon-links",
   ],
   "framework": {
     "name": "@storybook/angular",

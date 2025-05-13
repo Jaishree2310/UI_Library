@@ -84,6 +84,7 @@ npx chromatic --project-token=<your-token>
 
 3. Run command 
 ``` npm run chromatic ```
+``` npm run chromatic:ci ```
 ---
 
 ## Tech Stack
