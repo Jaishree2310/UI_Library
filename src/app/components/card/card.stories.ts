@@ -1,10 +1,14 @@
-import { CardComponent } from './card.component';
 import { Meta, StoryObj } from '@storybook/angular';
+import { CardComponent } from './card.component';
 
 const meta: Meta<CardComponent> = {
   title: 'MyComponents/Card',
   component: CardComponent,
   tags: ['autodocs'],
+  // Include action logging for outputs
+  argTypes: {
+    cardClick: { action: 'card clicked!' },
+  },
 };
 
 export default meta;
