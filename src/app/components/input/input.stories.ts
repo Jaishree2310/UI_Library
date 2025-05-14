@@ -13,7 +13,7 @@ const Template: StoryFn<InputComponent> = (args: InputComponent) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  placeholder: 'Enter something...',
+  placeholder: 'Enter something for test...',
 };
 
 export const CustomPlaceholder = Template.bind({});
