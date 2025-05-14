@@ -1,0 +1,29 @@
+name: 'Chromatic Deployment'
+
+on:
+  push:
+    branches: ['master']
+  pull_request:
+    branches: ['master']
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🧪 Run Storybook build (optional)
+        run: npm run build-storybook
+
+      - name: 🚀 Publish to Chromatic
+        run: npx chromatic --project-token=chpt_823f16ea7577b95 
